@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+#计算两个矩阵的乘积
 marrix1 = tf.constant([[3, 3]])
 marrix2 = tf.constant([[2], [2]])
 

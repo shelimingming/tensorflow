@@ -46,10 +46,10 @@ with tf.Session() as sess:
         sess.run(train_step, feed_dict={xs: x_data, ys: y_data})
         # print(sess.run(loss, feed_dict={xs: x_data, ys: y_data}))
         # 显示预测数据
-        # try:
-        #     ax.lines.remove(lines[0])
-        # except Exception:
-        #     pass
+        try:
+            ax.lines.remove(lines[0])
+        except Exception:
+            pass
         prediction_value = sess.run(prediction, feed_dict={xs: x_data})
         lines = ax.plot(x_data, prediction_value, 'r-', lw=5)
         plt.pause(0.1)
